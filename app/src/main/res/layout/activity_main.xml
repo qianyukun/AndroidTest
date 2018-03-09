@@ -15,7 +15,8 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/notification_download"
                 android:layout_width="wrap_content"
@@ -23,6 +24,12 @@
                 android:textSize="12sp"
                 android:background="@mipmap/back"
                 android:text="notification download install"/>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/splash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="splash IMMERSIVE_STICKY"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </RelativeLayout>

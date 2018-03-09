@@ -8,7 +8,7 @@ import java.util.Locale;
 
 public class LogUtil {
 
-    private static final String TAG = "";
+    private static final String TAG = "ALTER";
     // TODO :false
     private static boolean debug = false;
 
