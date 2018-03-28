@@ -1,1 +1,1 @@
-include ':app', ':permissionmanager', ':Interfaceslib', ':commmon', ':generateplugin'
+include ':app', ':permissionmanager', ':Interfaceslib', ':commmon', ':generateplugin', ':clean'
