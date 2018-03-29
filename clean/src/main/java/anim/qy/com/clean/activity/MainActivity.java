@@ -1,6 +1,7 @@
 package anim.qy.com.clean.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.ActivityCompat;
@@ -13,6 +14,7 @@ import java.util.concurrent.Executors;
 import anim.qy.com.clean.R;
 import anim.qy.com.clean.permission.UsageStatsPermissionUtil;
 import anim.qy.com.clean.task.GetPkgInfoTask;
+import anim.qy.com.clean.util.StatusBarColorUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             UsageStatsPermissionUtil.startAppUsageSetting(this, REQUEST_CODE_USAGESTATS);
             UsageStatsPermissionUtil.startPermissionGuide(this);
         } else {
-            mainHandler.post(topApp);
+            mainHandler.postDelayed(topApp,3000);
         }
     }
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 String foregroundApp = UsageStatsPermissionUtil.getForegroundApp(MainActivity.this);
                 Log.e(MainActivity.this.getClass().getSimpleName(), "foregroundApp " + foregroundApp);
-
+                StatusBarColorUtil.changeColor(MainActivity.this, Color.RED);
             } catch (Exception e) {
                 e.printStackTrace();
             }
